@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thank you for shopping with Jungle</h1>
+    <p>
+      Please keep this receipt for your records.<br>
+    </p>
+    <% @order.line_items.each do |item| %>
+      <%= render 'item', item: item %>
+    <% end %>
+    <h3>
+      Your total is: <%= humanized_money_with_symbol(@order.total) %>
+    </h3>
+  </body>
+</html>

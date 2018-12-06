@@ -1,0 +1,10 @@
+<% product = Product.find_by(id: item.product_id) %>
+<br>
+<h3></b> <%= product.name %></p></h3>
+<p><b>Description:</b> <%= product.description %></p>
+<p>
+  <b>Quantity:</b> <%= item.quantity %>
+  <b>Item</b> cost: <%= humanized_money_with_symbol(product.price) %>
+</p>
+<p><b>Items total:</b> <%= humanized_money_with_symbol(item.total_price) %></p>
+<br>
