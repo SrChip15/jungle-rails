@@ -1,0 +1,18 @@
+<article class="border review">
+  <div class="row">
+  <header class="col-sm-3">
+    <% stars = "" %>
+    <% for x in 1..review.rating %>
+    <%  stars << "&#9733" %>
+    <% end %>
+    <% for x in 1..(5 - review.rating) %>
+    <% stars << "&#9734" %>
+    <% end %>
+    <p><%= stars.html_safe %></p>
+    <p><b><%= review.user.email %></b></p>
+    <i><%= review.description %></i>
+  </header>
+  <section class="col-sm-5">
+  </section>
+  </div>
+</article>

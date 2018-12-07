@@ -108,7 +108,7 @@ cat2.products.create!({
   price: 2_026.29
 })
 
-cat3.products.create!({
+prod1 = cat3.products.create!({
   name:  'Optimal Sleeping Bed',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture1.jpg'),
@@ -116,7 +116,7 @@ cat3.products.create!({
   price: 3_052.00
 })
 
-cat3.products.create!({
+prod2 = cat3.products.create!({
   name:  'Electric Chair',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture2.jpg'),
@@ -124,7 +124,7 @@ cat3.products.create!({
   price: 987.65
 })
 
-cat3.products.create!({
+prod3 = cat3.products.create!({
   name:  'Red Bookshelf',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture3.jpg'),
@@ -132,5 +132,28 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+user1 = User.create!({
+  name: "SriNath",
+  email: "abc@abc.com",
+  password: "123"
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: "Wow! I love sleeping in this. Lots of room to fuck and sleep",
+  rating: 4
+})
+
+prod2.reviews.create!({
+  user_id: 1,
+  description: "Lego! Lego! Lego! Love this shit",
+  rating: 5
+})
+
+prod3.reviews.create!({
+  user_id: 1,
+  description: "Perfect for my books and so much more!:)",
+  rating: 3
+})
 
 puts "DONE!"
