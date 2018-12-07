@@ -1,18 +1,21 @@
-<article class="border review">
+<article class="review">
   <div class="row">
-  <header class="col-sm-3">
-    <% stars = "" %>
-    <% for x in 1..review.rating %>
-    <%  stars << "&#9733" %>
-    <% end %>
-    <% for x in 1..(5 - review.rating) %>
-    <% stars << "&#9734" %>
-    <% end %>
-    <p><%= stars.html_safe %></p>
-    <p><b><%= review.user.email %></b></p>
-    <i><%= review.description %></i>
-  </header>
-  <section class="col-sm-5">
-  </section>
+    <header class="col-sm-11">
+      <% stars = "" %>
+      <% for x in 1..review.rating %>
+      <%  stars << "&#9733" %>
+      <% end %>
+      <% for x in 1..(5 - review.rating) %>
+      <% stars << "&#9734" %>
+      <% end %>
+      <p><%= stars.html_safe %></p>
+      <% if current_user && current_user.id == review.user_id %>
+        <%= link_to product_review_path(@product, review), class: 'btn btn-xs btn-danger', method: :delete do %>
+                delete
+        <% end %>
+      <% end %>
+      <p><b><%= review.user.name %></b></p>
+      <p><i><%= review.description %></i></p>
+    </header>
   </div>
 </article>

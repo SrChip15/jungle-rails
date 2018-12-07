@@ -140,7 +140,7 @@ user1 = User.create!({
 
 prod1.reviews.create!({
   user_id: 1,
-  description: "Wow! I love sleeping in this. Lots of room to fuck and sleep",
+  description: "Wow! I love sleeping in this, esp after a hard day's work",
   rating: 4
 })
 
@@ -152,7 +152,7 @@ prod2.reviews.create!({
 
 prod3.reviews.create!({
   user_id: 1,
-  description: "Perfect for my books and so much more!:)",
+  description: "WTF!?..",
   rating: 3
 })
 
