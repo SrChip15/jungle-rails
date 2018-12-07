@@ -26,4 +26,7 @@
   <aside class="price">
     <%= humanized_money_with_symbol product.price %>
   </aside>
+
+  <p><b>Avg Ratings: <%= product.reviews.average(:rating) || "NA" %></b></p>
+
 </article>

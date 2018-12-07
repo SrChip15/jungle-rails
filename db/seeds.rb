@@ -146,13 +146,13 @@ prod1.reviews.create!({
 
 prod2.reviews.create!({
   user_id: 1,
-  description: "Lego! Lego! Lego! Love this shit",
+  description: "meh..",
   rating: 5
 })
 
 prod3.reviews.create!({
   user_id: 1,
-  description: "WTF!?..",
+  description: "Hard to reach for my books, but works",
   rating: 3
 })
 
