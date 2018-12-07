@@ -1,6 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-
-  before_filter :admin_access
+class Admin::CategoriesController < AdminController
 
   def index
     @categories = Category.order(id: :desc).all
