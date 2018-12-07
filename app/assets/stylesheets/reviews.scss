@@ -1,0 +1,19 @@
+section.products-show {
+  .review-form {}
+
+  .product-detail {
+    .reviews {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+
+      .dl-horizontal {
+        margin-bottom: 10px;
+      }
+
+      .review {
+        border-radius: 0;
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
