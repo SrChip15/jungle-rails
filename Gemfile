@@ -35,6 +35,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'stripe'
 gem 'faker'
+gem "nokogiri", ">= 1.11.0"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
